@@ -158,6 +158,7 @@ export default function Home() {
               </InputGroup>
             </Flex>
           }
+        <Text textAlign={"center"}>{"Mot de passe perdu ? @wazted_ sur twitter"}</Text>
       </Flex>
     </div>
   )
