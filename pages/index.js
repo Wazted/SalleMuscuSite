@@ -31,8 +31,6 @@ import {
 } from "@chakra-ui/react"
 
 const MotionBox = motion(Box)
-const MotionWrapItem = motion(WrapItem)
-const MotionWrap = motion(Wrap)
 
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode()
