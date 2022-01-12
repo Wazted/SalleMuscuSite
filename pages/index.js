@@ -121,7 +121,7 @@ export default function Home() {
                 :
                 {timer % 60 < 10 && "0"}{timer % 60}</Text>
               <InputGroup mt={14} direction={"row"} w={"100%"} size="lg">
-                <Input placeholder='Code pour securiser le timer'onChange={(e) => setSecretValue(e.target.value)} pr="4.5rm"/>
+                <Input placeholder='Code pour enlever le timer'onChange={(e) => setSecretValue(e.target.value)} pr="4.5rm"/>
                 <InputRightElement>
                   <IconButton size='md' icon={<UnlockIcon />} onClick={() => sendNewTimer()}/>
                 </InputRightElement>
