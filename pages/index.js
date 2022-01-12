@@ -121,7 +121,7 @@ export default function Home() {
                 :
                 {timer % 60 < 10 && "0"}{timer % 60}</Text>
               <InputGroup mt={14} direction={"row"} w={"100%"} size="lg">
-                <Input placeholder='Code pour enlever le timer'onChange={(e) => setSecretValue(e.target.value)} pr="4.5rm"/>
+                <Input value={secretValue} placeholder='Mot de passe pour enlever le timer'onChange={(e) => setSecretValue(e.target.value)} pr="4.5rm"/>
                 <InputRightElement>
                   <IconButton size='md' icon={<UnlockIcon />} onClick={() => sendNewTimer()}/>
                 </InputRightElement>
@@ -144,7 +144,7 @@ export default function Home() {
                 <SliderThumb />
               </Slider>
               <InputGroup mt={14} direction={"row"} w={"100%"} size="lg">
-                <Input isInvalid={sercretVerif} placeholder='Code pour securiser le timer'onChange={(e) => {if (e.target.value !== ""){setSecretVerif.off();} setSecretValue(e.target.value);}} pr="4.5rm"/>
+                <Input isInvalid={sercretVerif} value={secretValue} placeholder='Choisi un mot de passe pour valider le timer'onChange={(e) => {if (e.target.value !== ""){setSecretVerif.off();} setSecretValue(e.target.value);}} pr="4.5rm"/>
                 <InputRightElement>
                   <IconButton size='md' icon={<LockIcon />} onClick={() => {
                       if (secretValue === "") {
